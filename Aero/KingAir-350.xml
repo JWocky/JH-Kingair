@@ -51,9 +51,9 @@
 		<vtailarm  unit="FT" >   21.88 </vtailarm>
 
 		<location name="AERORP" unit="M">
-			<x> -2.0 </x>
+			<x> -			2.0 </x>
 			<y>   0.00 </y>
-			<z>   -0.59595 </z>
+			<z>   0.00 </z>
 		</location>
 
 		<location name="EYEPOINT" unit="M">
@@ -76,9 +76,9 @@
 
 		<emptywt unit="LBS" >      9885 </emptywt>
 		<location name="CG" unit="M">
-			<x> -2.5</x>
+			<x> 1.5</x>
 			<y>   0.00 </y>
-			<z> -0.57938 </z>
+			<z>   0.00 </z>
 		</location>
 
 		<pointmass name="Pilot">
@@ -580,7 +580,7 @@
 					<property>aero/qbar-psf</property>
 					<property>metrics/Sw-sqft</property>
 					<property>fcs/elevator-pos-rad</property>
-					<value>0.15</value>
+					<value>0.10</value>
 				</product>
 			</function>
 

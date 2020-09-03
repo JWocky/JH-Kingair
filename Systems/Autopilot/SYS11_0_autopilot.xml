@@ -44,7 +44,7 @@
 		<name>predicted nav1-error 5 seconds ahead</name>
 		<input>/autopilot/internal/nav1-track-error-deg</input>
 		<output>/autopilot/internal/nav1-error-5-sec-ahead</output>
-		<seconds>15</seconds>
+		<seconds>10</seconds>
 		<filter-gain>1.00</filter-gain>
 	</predict-simple>
 
@@ -52,7 +52,7 @@
 		<name>predicted heading error deg 5 sec ahead</name>
 		<input>/autopilot/internal/heading-bug-error-deg</input>
 		<output>/autopilot/internal/heading-bug-error-deg-5-sec-ahead</output>
-		<seconds>15</seconds>
+		<seconds>10/seconds>
 		<filter-gain>1.00</filter-gain>
 	</predict-simple>
 
@@ -60,7 +60,7 @@
 		<name>predicted true heading error deg 5 sec ahead</name>
 		<input>/autopilot/internal/true-heading-error-deg</input>
 		<output>/autopilot/internal/true-heading-error-deg-5-sec-ahead</output>
-		<seconds>15</seconds>
+		<seconds>10</seconds>
 		<filter-gain>1.00</filter-gain>
 	</predict-simple>
 
@@ -72,21 +72,6 @@
 		<filter-gain>0.1</filter-gain>
 	</predict-simple>
   
-	<filter>
-		<name>Aileron Command Limiter</name>
-		<type>gain</type>
-		<debug>false</debug>
-		<input>
-			<property>/controls/flight/wing-sweep</property>
-		</input>
-		<output>
-			<property>/autopilot/internal/aileron-limit-norm</property>
-		</output>
-		<gain>0.15</gain>
-		<u_min>20.0</u_min>
-		<u_max>45.0</u_max>
-	</filter>
-
 	<filter>
 		<name>Pitch Hold</name>
 		<type>gain</type>
@@ -716,7 +701,7 @@
 		</output>
 		<config>
 			<Kp>
-				<property>/autopilot/internal/turn_gain</property>
+				<property>/autopilot/settingspropgain-roll</property>
 			</Kp>
 			<Ki> 0.00</Ki>      <!-- proportional gain -->
 			<u_min>
@@ -794,7 +779,7 @@
 		</config>
 	</pid-controller>
   
-	<!-- pid-controller>
+	<pid-controller>
 		<name>System Command: Yaw damper</name>
 		<debug>false</debug>
 		<enable>
@@ -812,16 +797,16 @@
 			<property>controls/flight/rudder</property>
 		</output>
 		<config>
-			<Kp>-0.001</Kp>		<! - - proportional gain - - >
-			<beta>1.0</beta>	<! - - input value weighing factor - - >
-			<alpha>0.1</alpha>	<! - - low pass filter weighing factor - - >
-			<gamma>0.0</gamma>	<! - - input value weighing factor for unfiltered derivative error - - >
-			<Ti>10</Ti>        	<! - - integrator time - - >
-			<Td>0.001</Td>     	<! - - derivator time  - ->
-			<u_min>-0.25</u_min> 	<! - - minimum output clamp - - >
-			<u_max>0.25</u_max>  	<! - - maximum output clamp - - >
+			<Kp>-0.001</Kp>		<!-- proportional gain -->
+			<beta>1.0</beta>	<!-- input value weighing factor -->
+			<alpha>0.1</alpha>	<!-- low pass filter weighing factor -->
+			<gamma>0.0</gamma>	<!-- input value weighing factor for unfiltered derivative error -->
+			<Ti>10</Ti>        	<!-- integrator time -->
+			<Td>0.001</Td>     	<!-- derivator time  -->
+			<u_min>-0.25</u_min> 	<!-- minimum output clamp -->
+			<u_max>0.25</u_max>  	<!-- maximum output clamp -->
 		</config>
-	</pid-controller -->
+	</pid-controlle>
   
 	<pid-controller>
 		<name>System Command: Pitch</name>
