@@ -51,7 +51,7 @@
 		<vtailarm  unit="FT" >   21.88 </vtailarm>
 
 		<location name="AERORP" unit="M">
-			<x>   -2.0 </x>
+			<x>   -2.00 </x>
 			<y>   0.00 </y>
 			<z>   0.00 </z>
 		</location>
@@ -76,7 +76,7 @@
 
 		<emptywt unit="LBS" >      9885 </emptywt>
 		<location name="CG" unit="M">
-			<x> 1.5</x>
+			<x> -2.0</x>
 			<y>   0.00 </y>
 			<z>   0.00 </z>
 		</location>
@@ -518,7 +518,6 @@
 		<!-- Lift due to ground effects to make the take off faster -->
 		<function name="aero/function/kCLge">
 			<description>Change_in_lift_due_to_ground_effect</description>
-			<product>
 				<table>
 					<independentVar>aero/h_b-mac-ft</independentVar>
 					<tableData>
@@ -530,7 +529,6 @@
 						1.5000  1.0000	
 					</tableData>
 				</table>
-			</product>
 		</function>
 
 		<axis name="LIFT">

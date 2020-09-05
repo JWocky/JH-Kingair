@@ -18,6 +18,7 @@
 		<author>it0uchpods, IAHM-COL, SM, GabrielYV</author>
 
 		<aircraft-version>V0.00.00</aircraft-version>
+		<minimum-fg-version>2018.2.1</minimum-fg-version>
 		<status>Alpha</status>
 		<!-- 
 
@@ -711,6 +712,56 @@
 		<weather>
 			<relative-wind type="float">0.00</relative-wind>
 		</weather>
+
+		<settings>
+
+			<setting>
+				<name type="string">Units</name>
+				<current type="int">0</current>
+				<options>
+					<opt>
+						<name type="string">Imperial</name>
+						<pkey type="string">/voodoomaster/units</pkey>
+						<value type="string">imperial</value>
+					</opt>
+					<opt>
+						<name type="string">Metric</name>
+						<pkey type="string">/voodoomaster/units</pkey>
+						<value type="string">metric</value>
+					</opt>
+				</options>
+			</setting>
+
+			<setting>
+				<name type="string">Engines</name>
+				<current type="int">0</current>
+				<options>
+					<opt>
+						<name type="string"></name>
+						<pkey type="string">/engines/engine-set</pkey>
+						<value type="string">PW_PT6A-60</value>
+					</opt>
+					<!--opt>
+						<name type="string">PW118A</name>
+						<pkey type="string">/engines/engine-set</pkey>
+						<value type="string">PW118A</value>
+					</opt-->
+				</options>
+			</setting>
+
+			<setting>
+				<name type="string">Variants</name>
+				<current type="int">0</current>
+				<options>
+					<opt>
+						<name type="string">EMB-120</name>
+						<pkey type="string">/voodoomaster/variant</pkey>
+						<value type="string">EMB120</value>
+					</opt>
+				</options>
+			</setting>
+
+		</settings>
   </voodoomaster>
 
 	<!-- all the nasal files in their namespaces -->
