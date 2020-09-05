@@ -717,7 +717,7 @@
   <nasal><doors>
           <file>Nasal/doors.nas</file>
       </doors>
-		<<shared>
+		<shared>
 			<file>Systems/Autopilot/SYS11_0_compatibility.nas</file>
 			<file>Systems/Generic/conversions.nas</file>
 			<file>Systems/Generic/MainControl.nas</file>
