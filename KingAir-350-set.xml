@@ -717,11 +717,11 @@
   <nasal><doors>
           <file>Nasal/doors.nas</file>
       </doors>
-		<!-- voodoomaster>
-			<file>Aircraft/KingAir-350/Nasal/Pushback.nas</file>
-			<file>Aircraft/KingAir-350/Nasal/ground_handling.nas</file>
-			<file>Aircraft/KingAir-350/Nasal/mp-network.nas</file>
-		</voodoomaster -->
+		<!--<shared>
+			<file>Systems/Autopilot/SYS11_0_compatibility.nas</file>
+			<file>Systems/Generic/conversions.nas</file>
+			<file>Systems/Generic/MainControl.nas</file>
+		</shared>
 		<kingair>
 			<file>Systems/Autopilot/SYS11_0_compatibility.nas</file>
 			<file>Aircraft/KingAir-350/Nasal/kingair.nas</file>
