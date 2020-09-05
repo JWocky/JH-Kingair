@@ -36,7 +36,34 @@
 				<value>0</value>
 			</binding>
 		</key>
-    
+    	    		<key n="77">
+				<name>M</name>
+				<desc>Cycle HUD mode</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>/voodoomaster/hud/mode</property>
+					<value type="int">0</value>
+					<value type="int">1</value>
+					<value type="int">2</value>				
+					<!-- 3 reserved for radio operator -->
+					<value type="int">4</value>				
+				</binding>
+			</key>
+
+	    		<key n="109">
+				<name>m</name>
+				<desc>Cycle HUD mode</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>/voodoomaster/hud/mode</property>
+					<value type="int">4</value>
+					<!-- 3 reserved for radio operator -->
+					<value type="int">2</value>
+					<value type="int">1</value>
+					<value type="int">0</value>				
+				</binding>
+			</key>
+
 	</keyboard>
   
 </PropertyList>

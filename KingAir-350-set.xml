@@ -157,7 +157,131 @@
 		</multiplay>
     
 		<!-- #### HUD section if exists -->
-    
+    		<hud>
+			<enable3d>false</enable3d>
+			<path n="1">Systems/HUD/hud.xml</path>
+			<visibility n="1">false</visibility>
+			<palette>
+				<color n="0">
+					<alpha type="float">0.85</alpha>
+					<antialiased type="bool">true</antialiased>
+					<brightness type="float">0.85</brightness>
+					<transparent type="bool">true</transparent>
+					<red type="float">0.38</red>
+					<green type="float">1.0</green>
+					<blue type="float">0.22</blue>
+				</color>
+	
+				<color n="1">
+					<alpha type="float">0.85</alpha>
+					<antialiased type="bool">true</antialiased>
+					<brightness type="float">0.85</brightness>
+					<transparent type="bool">true</transparent>
+					<red type="float">1.0</red>
+					<green type="float">1.0</green>
+					<blue type="float">1.0</blue>
+				</color>
+	
+				<color n="2">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.1</red>
+					<green type="float">0.1</green>
+					<blue type="float">0.1</blue>
+				</color>
+	
+				<color n="3">
+					<alpha type="float">0.85</alpha>
+					<antialiased type="bool">true</antialiased>
+					<brightness type="float">0.85</brightness>
+					<transparent type="bool">true</transparent>
+					<red type="float">1.0</red>
+					<green type="float">0.2</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="4">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">1.0</red>
+					<green type="float">0.0</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="5">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.0</red>
+					<green type="float">1.0</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="6">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.1</red>
+					<green type="float">0.1</green>
+					<blue type="float">1.0</blue>
+				</color>
+	
+				<color n="7">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.0</red>
+					<green type="float">0.2</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="8">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.0</red>
+					<green type="float">0.0</green>
+					<blue type="float">0.2</blue>
+				</color>
+	
+				<color n="9">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.2</red>
+					<green type="float">0.0</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="10">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">1.0</red>
+					<green type="float">1.0</green>
+					<blue type="float">0.0</blue>
+				</color>
+
+			</palette>
+ 
+			<clipping>
+				<left type="double">-300</left>
+				<top type="double">250</top>
+				<right type="double">300</right>
+				<bottom type="double">-275</bottom>
+			</clipping>
+		</hud>
+
 		<!-- Blackout rendering due to G-forces -->
 		<rendering>
 			<redout>
@@ -493,6 +617,100 @@
     <pushback>
       <activated type="bool">false</activated>
     </pushback>
+
+		<route>
+			<marker n="0" type="string"></marker>
+			<number n="0" type="int"></number>
+			<code n="0" type="string"></code>
+			<title n="0" type="string"></title>
+			<bearing n="0" type="float"></bearing>
+			<distance n="0" type="float"></distance>
+
+			<marker n="1" type="string"></marker>
+			<number n="1" type="int"></number>
+			<code n="1" type="string"></code>
+			<title n="1" type="string"></title>
+			<bearing n="1" type="float"></bearing>
+			<distance n="1" type="float"></distance>
+
+			<marker n="2" type="string"></marker>
+			<number n="2" type="int"></number>
+			<code n="2" type="string"></code>
+			<title n="2" type="string"></title>
+			<bearing n="2" type="float"></bearing>
+			<distance n="2" type="float"></distance>
+
+			<marker n="3" type="string"></marker>
+			<number n="3" type="int"></number>
+			<code n="3" type="string"></code>
+			<title n="3" type="string"></title>
+			<bearing n="3" type="float"></bearing>
+			<distance n="3" type="float"></distance>
+
+			<marker n="4" type="string"></marker>
+			<number n="4" type="int"></number>
+			<code n="4" type="string"></code>
+			<title n="4" type="string"></title>
+			<bearing n="4" type="float"></bearing>
+			<distance n="4" type="float"></distance>
+
+			<marker n="5" type="string"></marker>
+			<number n="5" type="int"></number>
+			<code n="5" type="string"></code>
+			<title n="5" type="string"></title>
+			<bearing n="5" type="float"></bearing>
+			<distance n="5" type="float"></distance>
+
+			<marker n="6" type="string"></marker>
+			<number n="6" type="int"></number>
+			<code n="6" type="string"></code>
+			<title n="6" type="string"></title>
+			<bearing n="6" type="float"></bearing>
+			<distance n="6" type="float"></distance>
+
+			<marker n="7" type="string"></marker>
+			<number n="7" type="int"></number>
+			<code n="7" type="string"></code>
+			<title n="7" type="string"></title>
+			<bearing n="7" type="float"></bearing>
+			<distance n="7" type="float"></distance>
+
+			<marker n="8" type="string"></marker>
+			<number n="8" type="int"></number>
+			<code n="8" type="string"></code>
+			<title n="8" type="string"></title>
+			<bearing n="8" type="float"></bearing>
+			<distance n="8" type="float"></distance>
+
+			<marker n="9" type="string"></marker>
+			<number n="9" type="int"></number>
+			<code n="9" type="string"></code>
+			<title n="9" type="string"></title>
+			<bearing n="9" type="float"></bearing>
+			<distance n="9" type="float"></distance>
+
+			<marker n="10" type="string"></marker>
+			<number n="10" type="int"></number>
+			<code n="10" type="string"></code>
+			<title n="10" type="string"></title>
+			<bearing n="10" type="float"></bearing>
+			<distance n="10" type="float"></distance>
+		</route>
+
+		<engines>
+			<fuel_flow_total_pps type="double">0.00</fuel_flow_total_pps>
+			<airtime type="double">0.00</airtime>
+			<range_nm type="double">0.00</range_nm>
+		</engines>
+
+		<!-- menubar2 include="Dialogs/menubar.xml"></menubar2 -->
+		<hud>
+			<mode type="int">0</mode>
+		</hud>
+
+		<weather>
+			<relative-wind type="float">0.00</relative-wind>
+		</weather>
   </voodoomaster>
 
 	<!-- all the nasal files in their namespaces -->
