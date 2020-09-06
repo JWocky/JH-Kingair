@@ -51,7 +51,7 @@
 		<vtailarm  unit="FT" >   21.88 </vtailarm>
 
 		<location name="AERORP" unit="M">
-			<x>   -2.00 </x>
+			<x>   -1.50 </x>
 			<y>   0.00 </y>
 			<z>   0.00 </z>
 		</location>
