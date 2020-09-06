@@ -44,7 +44,7 @@
 		<name>predicted nav1-error 5 seconds ahead</name>
 		<input>/autopilot/internal/nav1-track-error-deg</input>
 		<output>/autopilot/internal/nav1-error-5-sec-ahead</output>
-		<seconds>5</seconds>
+		<seconds>15</seconds>
 		<filter-gain>1.00</filter-gain>
 	</predict-simple>
 
@@ -52,7 +52,7 @@
 		<name>predicted heading error deg 5 sec ahead</name>
 		<input>/autopilot/internal/heading-bug-error-deg</input>
 		<output>/autopilot/internal/heading-bug-error-deg-5-sec-ahead</output>
-		<seconds>5</seconds>
+		<seconds>15</seconds>
 		<filter-gain>1.00</filter-gain>
 	</predict-simple>
 
@@ -60,7 +60,7 @@
 		<name>predicted true heading error deg 5 sec ahead</name>
 		<input>/autopilot/internal/true-heading-error-deg</input>
 		<output>/autopilot/internal/true-heading-error-deg-5-sec-ahead</output>
-		<seconds>5</seconds>
+		<seconds>15</seconds>
 		<filter-gain>1.00</filter-gain>
 	</predict-simple>
 

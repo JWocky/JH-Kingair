@@ -604,6 +604,7 @@
 			<min-pitch type="float">-6.0</min-pitch>
 			<min-alt-ft type="int">1000</min-alt-ft>
 			<min-alt-m type="int">305</min-alt-m>
+v			<turn_gain type="double">-4.0</turn_gain>
 		</internal>
                 <locks>
                        <heading type="string"></heading>
@@ -754,9 +755,9 @@
 				<current type="int">0</current>
 				<options>
 					<opt>
-						<name type="string">EMB-120</name>
+						<name type="string">King Air 350i</name>
 						<pkey type="string">/voodoomaster/variant</pkey>
-						<value type="string">EMB120</value>
+						<value type="string">King Air 350i</value>
 					</opt>
 				</options>
 			</setting>
@@ -774,7 +775,6 @@
 			<file>Systems/Generic/MainControl.nas</file>
 		</shared>
 		<kingair>
-			<file>Systems/Autopilot/SYS11_0_compatibility.nas</file>
 			<file>Aircraft/KingAir-350/Nasal/kingair.nas</file>
 			<file>Aircraft/KingAir-350/Nasal/liveries.nas</file>
 			<file>Aircraft/KingAir-350/Nasal/lighting.nas</file>
