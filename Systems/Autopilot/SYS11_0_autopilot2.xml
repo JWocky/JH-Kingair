@@ -2,7 +2,7 @@
 
 <!--
     ================================================================
-    Autopilot SYS9 (originally for Voodoomaster test platform)
+    Autopilot SYS11 (originally for Voodoomaster test platform)
     JWOCKY: April 2015, adapted for 767-Sentry and variants
 	    May 2015 in 727-230-JSB(copy), StratoFortressH, RA-5
             Developed in SYS9 Fall 2015- Summer 2016
@@ -52,7 +52,7 @@
 		<name>predicted heading error deg 5 sec ahead</name>
 		<input>/autopilot/internal/heading-bug-error-deg</input>
 		<output>/autopilot/internal/heading-bug-error-deg-5-sec-ahead</output>
-		<seconds>10/seconds>
+		<seconds>10</seconds>
 		<filter-gain>1.00</filter-gain>
 	</predict-simple>
 
