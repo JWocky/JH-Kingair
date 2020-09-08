@@ -108,10 +108,9 @@
 		<!-- Flap settings -->
 		<flaps>
 			<setting> 0.00 </setting>
-			<!--setting> 0.50 </setting--> 
-			<!--setting> 1.00 </setting--> <!-- Do not use --> <!-- FDM is unstable -->
+			<setting> 0.50 </setting> 
+			<setting> 1.00 </setting>
 		</flaps>
-
 		<!-- #### virtual-cockpit archive="y">true</virtual-cockpit (Not much of a virtual cockpit yet) -->
 
 		<!-- Instrumentation in sim -->
@@ -345,101 +344,30 @@
 			</config>
 		</view>
 
-    <!-- #### help text, currently only copied from C-47 -->
-    <help>
-      <title>Avro Lancaster</title>
-      <key>
-	<name>d</name>
-	<desc>Open/Close crew door</desc>
-      </key>
-      <line/>
-      <line>========== Engines Start Checklist (not updated to Lancaster yet) ==========</line>
-      <line>1 - Left tank selector -> LH</line>
-      <line>2 - Right tank selector -> RH</line>
-      <line>3 - Master battery -> ON</line>
-      <line>4 - Left booster pump -> ON (Fuel Pressure increase over 12 PSI)</line>
-      <line>5 - Right booster pump -> ON (Fuel Pressure increase over 12 PSI)</line>
-      <line>6 - Mixture -> Full Rich</line>
-      <line>7 - Throttle -> 10%</line>
-      <line>8 - Propeller-pitch -> 100%</line>
-      <line>9 - Left magneto -> BOTH</line>
-      <line>10- Right magneto -> BOTH</line>
-      <line>11- Left engine starter -> Left engine start</line>
-      <line>12- Right engine starter -> Right engine start</line>
-      <line>13- Left booster pump -> OFF</line>
-      <line>14- Right booster pump -> OFF</line>
-      <line/>
-      <line>========== Engines Autostart ==========</line>
-      <line>1 - Open Douglas DC-3 C47 dialog (Douglas DC-3 C47 > Options)</line>
-      <line>2 - Click on Autostart button</line>
-      <line>3 - Press "s" key</line>
-      <line/>
-      <line>========== Engines Stop Checklist ==========</line>
-      <line>1 - Mixture -> IDLE - CUT OFF</line>
-      <line>2 - Left magneto -> OFF</line>
-      <line>3 - Right magneto -> OFF</line>
-      <line>4 - Master battery -> OFF</line>
-      <line/>
-      <line>========== Procedures ==========</line>
-      <line>Takeoff ->Full throttle (48" Hg), Prop pitch for high RPM (2700 RPM), 1 mn. No flaps, rotate at 84 KIAS</line>
-      <line>Climbout -> Throttle for 41-42" Hg, Prop pitch for 2550 RPM, no flaps, 115 KIAS</line>
-      <line>Cruise -> trim down, Throttle for 31-33" Hg, Prop pitch for 2050 RPM</line>
-      <line>Approach and Landing -> full flaps, 105 ... 84 KIAS (1.3 VS0 = 75 KIAS)</line>
-      <line>Landing gear -> pull / push Gear Handle or press g / G key</line>
-      <line>Tail Gear lock / unlock -> click on handle or press "l" (L) toggle key</line>
-      <line/>
-      <line>========== Dual Control ==========</line>
-      <line>For a best experience, pilot and copilot need to be connected on the same server</line>
-      <line>=== Pilot select copilot ===</line>
-      <line>1 - Open Pilot dialog (Douglas DC-3 C47 > Select MP-copilot)</line>
-      <line>2 - Select one copilot available</line>
-      <line>3 - Close Pilot dialog</line>
-      <line>=== Copilot select pilot ===</line>
-      <line>1 - Open Copilot dialog (Douglas DC-3 C47 > Select MP-pilot)</line>
-      <line>2 - Select one pilot available</line>
-      <line>3 - Close Copilot dialog</line>
-      <line/>
-      <line>========== HowTo use engines handle ==========</line>
-      <line>Hold Left Mouse Button on engine handle and up/down your mouse in order to adjust setting of 2 engines</line>
-      <line>Hold Scroll Mouse Button on engine handle and up/down your mouse in order to adjust setting of 1 engine</line>
-      <line/>
-    </help>
-
     <menubar include="Dialogs/Pilot_Menu.xml"/>
+
   </sim>
 
-<it-autoflight>
-	<config>
-		<roll>
-			<umin>-0.40</umin>
-			<umax>0.60</umax>
-			<kp>0.025</kp>
-			<kp-vloc>0.025</kp-vloc>
-			<ti>10.0</ti>
-			<td>0.000001</td>
-			<pfactor-offset>0.10</pfactor-offset>
-		</roll>
-		<pitch>
-			<umin>-0.50</umin>
-			<umax>0.50</umax>
-			<kp>-0.025</kp>
-			<ti>10.0</ti>
-			<td>0.000001</td>
-		</pitch>
-		<cmd>
-			<roll-kp>-1.4</roll-kp>
-			<roll-scale>1.0</roll-scale>
-			<vorloc>-2.0</vorloc>
-			<vs>0.01</vs>
-		</cmd>
-	</config>
-	<settings>
-		<enable-stby>0</enable-stby> <!-- If disabled, LVL and V/S become active when AP on. -->
-		<pitch-mode>2</pitch-mode> <!-- 0 = Elevator trim only, 1 = Elevator only, 2 = Elevator and Autotrim -->
-		<auto-arm-alt>1</auto-arm-alt> <!-- Enable automatic altitude arm -->
-		<bank-limit>15</bank-limit> <!-- Set the bank limit -->
-	</settings>
-</it-autoflight>
+	<fdm>
+		<jsbsim>
+			<fcs>
+				<flap-setting type="int">0</flap-setting>
+			</fcs>
+		</jsbsim>
+	</fdm>
+
+ 
+	<engines>
+		<engine-set type="string">PW_PT6A-60</engine-set>
+		<engine n="0">
+			<reverser type="bool">false</reverser>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine>     
+		<engine n="1">
+			<reverser type="bool">false</reverser>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine> 
+	</engines>
 
 	<!-- Fuel and what anything else can be consumed, but normally fuel tanks -->
 	<consumables>
@@ -505,72 +433,11 @@
 	</payload>
 
   <controls>
-    <engines>
-      <engine n="0">
-	<magnetos type="int">0</magnetos>
-	<rpm>0</rpm>
-	<running>false</running>
-	<boost type="bool">true</boost>
-	<oil-dilution type="bool">false</oil-dilution>
-	<cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
-	<cowl-flaps-norm type="double">1</cowl-flaps-norm>
-	<cowl-flaps-pos type="double">1</cowl-flaps-pos>
-      </engine>
-      <engine n="1">
-	<magnetos type="int">0</magnetos>
-	<rpm>0</rpm>
-	<running>false</running>
-	<boost type="bool">true</boost>
-	<oil-dilution type="bool">false</oil-dilution>
-	<cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
-	<cowl-flaps-norm type="double">1</cowl-flaps-norm>
-	<cowl-flaps-pos type="double">1</cowl-flaps-pos>
-      </engine>
-      <engine n="2">
-	<magnetos type="int">0</magnetos>
-	<rpm>0</rpm>
-	<running>false</running>
-	<boost type="bool">true</boost>
-	<oil-dilution type="bool">false</oil-dilution>
-	<cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
-	<cowl-flaps-norm type="double">1</cowl-flaps-norm>
-	<cowl-flaps-pos type="double">1</cowl-flaps-pos>
-      </engine>
-      <engine n="3">
-	<magnetos type="int">0</magnetos>
-	<rpm>0</rpm>
-	<running>false</running>
-	<boost type="bool">true</boost>
-	<oil-dilution type="bool">false</oil-dilution>
-	<cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
-	<cowl-flaps-norm type="double">1</cowl-flaps-norm>
-	<cowl-flaps-pos type="double">1</cowl-flaps-pos>
-      </engine>
-      <engine n="4">
-	<magnetos type="int">0</magnetos>
-	<rpm>0</rpm>
-	<running>false</running>
-	<boost type="bool">true</boost>
-	<oil-dilution type="bool">false</oil-dilution>
-	<cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
-	<cowl-flaps-norm type="double">1</cowl-flaps-norm>
-	<cowl-flaps-pos type="double">1</cowl-flaps-pos>
-      </engine>
-      <engine n="5">
-	<magnetos type="int">0</magnetos>
-	<rpm>0</rpm>
-	<running>false</running>
-	<boost type="bool">true</boost>
-	<oil-dilution type="bool">false</oil-dilution>
-	<cowl-flaps-cmd type="int">1</cowl-flaps-cmd>
-	<cowl-flaps-norm type="double">1</cowl-flaps-norm>
-	<cowl-flaps-pos type="double">1</cowl-flaps-pos>
-      </engine>
-    </engines>
 
     <gear>
       <brake-parking type="double">1</brake-parking>
     </gear>
+
   </controls>
  
 
@@ -614,11 +481,57 @@ v			<turn_gain type="double">-4.0</turn_gain>
 
   <!-- Voodoomaster plane specific initializations -->
   <voodoomaster>
-    <steering-wheel type="int">2</steering-wheel>
-    <steering-type type="string">Taildragger-steer</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
-    <pushback>
-      <activated type="bool">false</activated>
-    </pushback>
+
+		<dialogs>
+			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel</fuel-and-payload>
+			<system-settings type="string">Antonov An-124 System Settings</system-settings>
+		</dialogs>
+
+
+		<internal>
+			<message-header type="string">...</message-header>
+			<message-switcher type="string">...</message-switcher>
+
+			<msg_pump0 type="string">Fuel pumps left wing starting!</msg_pump0>
+			<msg_pump1 type="string">Fuel pumps right wing starting!</msg_pump1>
+
+			<msg_engine0 type="string">Engine 1 starting up!</msg_engine0>
+			<msg_engine1 type="string">Engine 2 starting up!</msg_engine1>
+			<msg_engine2 type="string">Engine 3 starting up!</msg_engine2>
+			<msg_engine3 type="string">Engine 4 starting up!</msg_engine3>
+			<msg_engine4 type="string">Engine 1 starting up!</msg_engine4>
+			<msg_engine5 type="string">Engine 2 starting up!</msg_engine5>
+			<msg_engine6 type="string">Engine 3 starting up!</msg_engine6>
+			<msg_engine7 type="string">Engine 4 starting up!</msg_engine7>
+
+			<msg_engspin0 type="string">Engine 1 spinning up!</msg_engspin0>
+			<msg_engspin1 type="string">Engine 2 spinning up!</msg_engspin1>
+			<msg_engspin2 type="string">Engine 3 spinning up!</msg_engspin2>
+			<msg_engspin3 type="string">Engine 4 spinning up!</msg_engspin3>
+			<msg_engspin4 type="string">Engine 1 spinning up!</msg_engspin4>
+			<msg_engspin5 type="string">Engine 2 spinning up!</msg_engspin5>
+			<msg_engspin6 type="string">Engine 3 spinning up!</msg_engspin6>
+			<msg_engspin7 type="string">Engine 4 spinning up!</msg_engspin7>
+
+			<msg_engwatch0 type="string">Engine 1 is running!</msg_engwatch0>
+			<msg_engwatch1 type="string">Engine 2 is running!</msg_engwatch1>
+			<msg_engwatch2 type="string">Engine 3 is running!</msg_engwatch2>
+			<msg_engwatch3 type="string">Engine 4 is running!</msg_engwatch3>
+			<msg_engwatch4 type="string">Engine 1 is running!</msg_engwatch4>
+			<msg_engwatch5 type="string">Engine 2 is running!</msg_engwatch5>
+			<msg_engwatch6 type="string">Engine 3 is running!</msg_engwatch6>
+			<msg_engwatch7 type="string">Engine 4 is running!</msg_engwatch7>
+
+			<msg_engine0_stop type="string">Engine 1 shutting down!</msg_engine0_stop>
+			<msg_engine1_stop type="string">Engine 2 shutting down!</msg_engine1_stop>
+			<msg_engine2_stop type="string">Engine 3 shutting down!</msg_engine2_stop>
+			<msg_engine3_stop type="string">Engine 4 shutting down!</msg_engine3_stop>
+			<msg_engine4_stop type="string">Engine 1 shutting down!</msg_engine4_stop>
+			<msg_engine5_stop type="string">Engine 2 shutting down!</msg_engine5_stop>
+			<msg_engine6_stop type="string">Engine 3 shutting down!</msg_engine6_stop>
+			<msg_engine7_stop type="string">Engine 4 shutting down!</msg_engine7_stop>
+
+		</internal>
 
 		<route>
 			<marker n="0" type="string"></marker>
@@ -714,6 +627,15 @@ v			<turn_gain type="double">-4.0</turn_gain>
 			<relative-wind type="float">0.00</relative-wind>
 		</weather>
 
+		<steering>
+			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+			<steering-wheel type="int">0</steering-wheel>
+		</steering>
+
+		<pushback>
+			<activated type="bool">false</activated>
+		</pushback>
+
 		<settings>
 
 			<setting>
@@ -763,25 +685,56 @@ v			<turn_gain type="double">-4.0</turn_gain>
 			</setting>
 
 		</settings>
+		<systems>
+			<electrical>
+				<number-apus type="int">1</number-apus>
+			</electrical>
+
+			<engines>
+				<number type="int">4</number>
+				<set>
+					<name type="string">PW_PT6A-60</name>
+					<number type="int">2</number>
+				</set>
+				<set>
+					<name type="string">PW118A</name>
+					<number type="int">2</number>
+				</set>
+			</engines>
+
+			<fuel>
+				<number-pumps type="int">2</number-pumps>
+			</fuel>
+		</systems>
   </voodoomaster>
 
 	<!-- all the nasal files in their namespaces -->
-  <nasal><doors>
-          <file>Nasal/doors.nas</file>
-      </doors>
-		<shared>
-			<file>Systems/Autopilot/SYS11_0_compatibility.nas</file>
-			<file>Systems/Generic/conversions.nas</file>
-			<file>Systems/Generic/MainControl.nas</file>
-		</shared>
+  	<nasal>
 		<kingair>
-			<file>Aircraft/KingAir-350/Nasal/kingair.nas</file>
-			<file>Aircraft/KingAir-350/Nasal/liveries.nas</file>
-			<file>Aircraft/KingAir-350/Nasal/lighting.nas</file>
+			<file>Aircraft/JH-Kingair/Systems/Settings/Settings.nas</file>
+			<file>Aircraft/JH-Kingair/Systems/Autostart/Autostart.nas</file>
+			<file>Aircraft/JH-Kingair/Systems/Pilots/Pilots.nas</file>
+			<file>Aircraft/JH-Kingair/Systems/Engines/Reverse-Thrust.nas</file>
+			<file>Aircraft/JH-Kingair/Nasal/electrical.nas</file>
+			<file>Aircraft/JH-Kingair/Nasal/lighting.nas</file>
+			<!--file>Aircraft/il-96-400/Nasal/flightdirector.nas</file-->
+			<!-- file>Aircraft/JH-Kingair/Nasal/systems.nas</file-->
+			<file>Aircraft/JH-Kingair/Nasal/AFDS.nas</file>
+			<file>Aircraft/JH-Kingair/Nasal/tyresmoke.nas</file>
+			<file>Systems/Generic/MainControl.nas</file>
 		</kingair>
-                <dialogs>
-                    <file>Nasal/dialogs.nas</file>
-                </dialogs>
+
+		<gui2>
+			<file>Aircraft/JH-Kingair/Canvas/Style.nas</file>
+			<file>Aircraft/JH-Kingair/Canvas/Widget.nas</file>
+			<file>Aircraft/JH-Kingair/Canvas/widgets/Button.nas</file>
+			<file>Aircraft/JH-Kingair/Canvas/widgets/Label.nas</file>
+		</gui2>
+
+		<canvas2>
+			<file>Aircraft/JH-Kingair/Canvas/gui.nas</file>
+			<file>Aircraft/JH-Kingair/Canvas/DefaultStyle.nas</file>
+		</canvas2>
 	</nasal>
 
 </PropertyList>

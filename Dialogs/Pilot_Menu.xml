@@ -28,13 +28,19 @@
 			<label>Super KingAir 350</label>
 			<enabled type="bool">true</enabled>
 
-			<item>
-				<label>Autostart</label>
-				<binding>
-					<command>property-toggle</command>
-					<property>sim/model/start-idling</property>
-				</binding>
-			</item>
+                    			<item>
+						<label>Automatic Start/Shutdown</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+								var autostart_dialog=kingair.AutostartDialog.new();
+							</script>
+						</binding>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/start-idling</property>
+						</binding>
+					</item>
 
 			<item>
 				<label>Yoke</label>
