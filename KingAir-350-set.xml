@@ -479,14 +479,13 @@ v			<turn_gain type="double">-4.0</turn_gain>
                 </locks>
 	</autopilot>
 
-  <!-- Voodoomaster plane specific initializations -->
-  <voodoomaster>
+	<!-- Voodoomaster plane specific initializations -->
+	<voodoomaster>
 
 		<dialogs>
 			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel</fuel-and-payload>
 			<system-settings type="string">Antonov An-124 System Settings</system-settings>
 		</dialogs>
-
 
 		<internal>
 			<message-header type="string">...</message-header>
@@ -532,6 +531,166 @@ v			<turn_gain type="double">-4.0</turn_gain>
 			<msg_engine7_stop type="string">Engine 4 shutting down!</msg_engine7_stop>
 
 		</internal>
+
+		<systems>
+			<electrical>
+				<number-apus type="int">1</number-apus>
+			</electrical>
+
+			<engines>
+				<number type="int">4</number>
+				<set>
+					<name type="string">PW_PT6A-60</name>
+					<number type="int">2</number>
+				</set>
+				<set>
+					<name type="string">PW_PT6A-60</name>
+					<number type="int">2</number>
+				</set>
+			</engines>
+
+			<fuel>
+				<number-pumps type="int">2</number-pumps>
+			</fuel>
+
+		</systems>
+
+		<settings>
+
+			<setting>
+				<name type="string">Units</name>
+				<current type="int">0</current>
+				<options>
+					<opt>
+						<name type="string">Imperial</name>
+						<pkey type="string">/voodoomaster/units</pkey>
+						<value type="string">imperial</value>
+					</opt>
+					<opt>
+						<name type="string">Metric</name>
+						<pkey type="string">/voodoomaster/units</pkey>
+						<value type="string">metric</value>
+					</opt>
+				</options>
+			</setting>
+
+			<setting>
+				<name type="string">Engines</name>
+				<current type="int">0</current>
+				<options>
+					<opt>
+						<name type="string">PW_PT6A-60</name>
+						<pkey type="string">/engines/engine-set</pkey>
+						<value type="string">PW_PT6A-60</value>
+					</opt>
+					<opt>
+						<name type="string">PW118A</name>
+						<pkey type="string">/engines/engine-set</pkey>
+						<value type="string">PW118A</value>
+					</opt>
+				</options>
+			</setting>
+
+			<setting>
+				<name type="string">Variants</name>
+				<current type="int">0</current>
+				<options>
+					<opt>
+						<name type="string">King Air 350i</name>
+						<pkey type="string">/voodoomaster/variant</pkey>
+						<value type="string">350i</value>
+					</opt>
+				</options>
+			</setting>
+
+		</settings>
+
+		<pilots>
+
+			<setting>
+				<name type="string">Nosewheel Steering</name>
+				<current type="int">1</current>
+				<listen type="int">1</listen>
+				<listenprop type="string">/fdm/jsbsim/systems/NWS/engaged</listenprop>
+				<options>
+					<opt>
+						<name type="string">On</name>
+						<pkey type="string">/fdm/jsbsim/systems/NWS/engaged</pkey>
+						<value type="int">1</value>
+					</opt>
+					<opt>
+						<name type="string">Off</name>
+						<pkey type="string">/fdm/jsbsim/systems/NWS/engaged</pkey>
+						<value type="int">0</value>
+					</opt>
+				</options>
+			</setting>
+
+		</pilots>
+
+		<steering>
+			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+			<steering-wheel type="int">0</steering-wheel>
+		</steering>
+
+		<pushback>
+			<activated type="bool">false</activated>
+		</pushback>
+
+		<ground-service>
+			<fuel-truck>
+				<truck n="0">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="1">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="2">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="3">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="4">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+				<truck n="5">
+					<clean type="bool">false</clean>
+					<connect type="bool">false</connect>
+					<enable type="bool">false</enable>
+					<state type="double">0.00</state>
+					<transfer type="bool">false</transfer>
+				</truck>
+			</fuel-truck>
+		</ground-service>
+
+		<weather>
+			<relative-wind type="float">0.00</relative-wind>
+		</weather>
+
+		<hud>
+			<mode type="int">0</mode>
+		</hud>
 
 		<route>
 			<marker n="0" type="string"></marker>
@@ -618,95 +777,7 @@ v			<turn_gain type="double">-4.0</turn_gain>
 			<range_nm type="double">0.00</range_nm>
 		</engines>
 
-		<!-- menubar2 include="Dialogs/menubar.xml"></menubar2 -->
-		<hud>
-			<mode type="int">0</mode>
-		</hud>
-
-		<weather>
-			<relative-wind type="float">0.00</relative-wind>
-		</weather>
-
-		<steering>
-			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
-			<steering-wheel type="int">0</steering-wheel>
-		</steering>
-
-		<pushback>
-			<activated type="bool">false</activated>
-		</pushback>
-
-		<settings>
-
-			<setting>
-				<name type="string">Units</name>
-				<current type="int">0</current>
-				<options>
-					<opt>
-						<name type="string">Imperial</name>
-						<pkey type="string">/voodoomaster/units</pkey>
-						<value type="string">imperial</value>
-					</opt>
-					<opt>
-						<name type="string">Metric</name>
-						<pkey type="string">/voodoomaster/units</pkey>
-						<value type="string">metric</value>
-					</opt>
-				</options>
-			</setting>
-
-			<setting>
-				<name type="string">Engines</name>
-				<current type="int">0</current>
-				<options>
-					<opt>
-						<name type="string"></name>
-						<pkey type="string">/engines/engine-set</pkey>
-						<value type="string">PW_PT6A-60</value>
-					</opt>
-					<!--opt>
-						<name type="string">PW118A</name>
-						<pkey type="string">/engines/engine-set</pkey>
-						<value type="string">PW118A</value>
-					</opt-->
-				</options>
-			</setting>
-
-			<setting>
-				<name type="string">Variants</name>
-				<current type="int">0</current>
-				<options>
-					<opt>
-						<name type="string">King Air 350i</name>
-						<pkey type="string">/voodoomaster/variant</pkey>
-						<value type="string">King Air 350i</value>
-					</opt>
-				</options>
-			</setting>
-
-		</settings>
-		<systems>
-			<electrical>
-				<number-apus type="int">1</number-apus>
-			</electrical>
-
-			<engines>
-				<number type="int">4</number>
-				<set>
-					<name type="string">PW_PT6A-60</name>
-					<number type="int">2</number>
-				</set>
-				<set>
-					<name type="string">PW118A</name>
-					<number type="int">2</number>
-				</set>
-			</engines>
-
-			<fuel>
-				<number-pumps type="int">2</number-pumps>
-			</fuel>
-		</systems>
-  </voodoomaster>
+	</voodoomaster>
 
 	<!-- all the nasal files in their namespaces -->
   	<nasal>
